@@ -130,12 +130,13 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
-
+                        -Dfile.encoding=UTF-8
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <systemProperties>
                         <property>
-
+                            <name>allure.results.directory</name>
+                            <value>${project.build.directory}/target/allure-results</value>
                         </property>
                     </systemProperties>
                 </configuration>
