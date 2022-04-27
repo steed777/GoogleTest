@@ -110,6 +110,8 @@
 
     </dependencies>
     <build>
+
+        <defaultGoal>compile</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -150,6 +152,7 @@
                     <reportDirectory>${basedir}/target/allure-results</reportDirectory>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
         },
         features = "src/test/resources/features/",
         // allure-results = "target",
-        glue = "steed777.steps")
+        glue = "com.github.steed777.steps")
 public class BDDRunner extends AbstractTestNGCucumberTests {
 
 
