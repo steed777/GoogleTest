@@ -1,9 +1,9 @@
-package steed777.flow;
+package com.github.steed777.flow;
 
 
+import com.github.steed777.pages.googlePage.GooglePage;
 import org.openqa.selenium.support.PageFactory;
-import steed777.common.Browser;
-import steed777.pages.googlePage.GooglePage;
+import com.github.steed777.common.Browser;
 
 public class GoogleFlow {
 

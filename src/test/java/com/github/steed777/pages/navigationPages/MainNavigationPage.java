@@ -1,9 +1,9 @@
-package steed777.pages.navigationPages;
+package com.github.steed777.pages.navigationPages;
 
 
+import com.github.steed777.pages.MainPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import steed777.pages.MainPage;
 
 
 public class MainNavigationPage extends MainPage {

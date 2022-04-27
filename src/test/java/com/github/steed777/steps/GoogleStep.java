@@ -1,9 +1,9 @@
-package steed777.steps;
+package com.github.steed777.steps;
 
 
 
 import io.cucumber.java.en.When;
-import steed777.flow.GoogleFlow;
+import com.github.steed777.flow.GoogleFlow;
 
 
 public class GoogleStep {

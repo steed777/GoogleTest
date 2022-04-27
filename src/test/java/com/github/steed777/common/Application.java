@@ -1,4 +1,4 @@
-package steed777.common;
+package com.github.steed777.common;
 
 import io.qameta.allure.Allure;
 import org.apache.log4j.Logger;

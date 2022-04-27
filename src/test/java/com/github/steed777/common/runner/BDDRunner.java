@@ -1,4 +1,4 @@
-package steed777.common.runner;
+package com.github.steed777.common.runner;
 
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;

@@ -1,11 +1,11 @@
-package steed777.pages.googlePage;
+package com.github.steed777.pages.googlePage;
 
 
 
+import com.github.steed777.pages.MainPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import steed777.common.Browser;
-import steed777.pages.MainPage;
+import com.github.steed777.common.Browser;
 
 
 public class GooglePage extends MainPage {
