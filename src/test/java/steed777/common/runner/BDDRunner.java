@@ -8,12 +8,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         plugin = {
                 "pretty",
-
+                "io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm"
         },
         features = "src/test/resources/features/",
         // allure-results = "target",
-        glue = "steed777.steps",
-        publish = true)
+        glue = "steed777.steps")
 public class BDDRunner extends AbstractTestNGCucumberTests {
 
 
