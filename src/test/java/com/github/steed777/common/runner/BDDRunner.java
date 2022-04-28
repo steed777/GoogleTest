@@ -7,8 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         plugin = {
-                "pretty",
-                "io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm"
+                "pretty"
+
         },
         features = "src/test/resources/features/",
         // allure-results = "target",
