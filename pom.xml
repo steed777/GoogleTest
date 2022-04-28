@@ -183,7 +183,7 @@
                 <version>2.9</version>
                 <configuration>
                     <resultsDirectory>
-                        ${project.basedir}/allure-results
+                        ${project.basedir}/GoogleTest/allure-results
                     </resultsDirectory>
                 </configuration>
             </plugin>
