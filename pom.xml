@@ -8,7 +8,7 @@
     <artifactId>GoogleTest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
+    <!--<properties>
         <allure.version>2.17.2</allure.version>
         <java.version>8</java.version>
         <aspectj.version>1.9.2</aspectj.version>
@@ -92,7 +92,7 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
-            </plugin>
+            </plugin>-->
             <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -110,7 +110,7 @@
                      <target>8</target>
                  </configuration>
              </plugin>-->
-        </plugins>
+        <!--</plugins>
     </build>
 
     <reporting>
@@ -125,8 +125,8 @@
                 </configuration>
             </plugin>
         </plugins>
-    </reporting>
-    <!--<properties>
+    </reporting>-->
+    <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <aspectj.version>1.9.2</aspectj.version>
@@ -137,14 +137,14 @@
 
     <dependencies>
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-testng &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>${cucumber.version}</version>
         </dependency>
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -158,7 +158,7 @@
             <scope>compile</scope>
         </dependency>
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -184,38 +184,38 @@
             <scope>test</scope>
         </dependency>
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/io.qameta.allure/allure-commandline &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-commandline -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-commandline</artifactId>
             <version>${allure.version}</version>
             <type>pom</type>
         </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/junit/junit &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-core &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
             <version>${cucumber.version}</version>
         </dependency>
-        &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-junit &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-testng-adaptor</artifactId>
             <version>1.5.4</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>
@@ -232,12 +232,12 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
 
-                    <properties>
+                    <!--<properties>
                         <property>
                             <name>listener</name>
                             <value>ru.yandex.qatools.allure.testng.AllureRunListener</value>
                         </property>
-                    </properties>
+                    </properties>-->
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -248,8 +248,8 @@
                 </dependencies>
             </plugin>
 
-        </plugins>-->
-
+        </plugins>
+    </build>
 
 
 </project>
