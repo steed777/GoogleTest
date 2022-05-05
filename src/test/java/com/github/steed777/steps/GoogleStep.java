@@ -9,14 +9,14 @@ import io.qameta.allure.Step;
 
 public class GoogleStep {
 
-    @Step("Go to the testing page")
+   // @Step("Go to the testing page")
     @When("Go to the testing page")
-
     public void pageAuthorization() {
         GoogleFlow.goGooglePage();
 
     }
-    @Step("Entering in the search field 'buy a bork c804 coffee machine' click find")
+
+   // @Step("Entering in the search field 'buy a bork c804 coffee machine' click find")
     @When("Entering in the search field 'buy a bork c804 coffee machine' click find")
     public void authorizationUser() {
         GoogleFlow.enterNameMachine();
