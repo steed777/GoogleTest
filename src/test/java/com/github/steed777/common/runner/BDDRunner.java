@@ -19,7 +19,7 @@ import org.testng.annotations.AfterClass;
 public class BDDRunner extends AbstractTestNGCucumberTests {
 
 
-    @AfterClass
+    /*@AfterClass
     public void browserClose() {
 
         try {
@@ -28,5 +28,5 @@ public class BDDRunner extends AbstractTestNGCucumberTests {
         } catch (Exception ex) {
             Application.error("Что то пошло не так", ex);
         }
-    }
+    }*/
 }
