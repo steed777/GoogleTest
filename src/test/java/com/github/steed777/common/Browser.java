@@ -15,13 +15,16 @@ public enum Browser {
 
     Browser() {
         try {
-            FirefoxOptions options = new FirefoxOptions();
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver(options);
+            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+           // FirefoxOptions options = new FirefoxOptions();
+           // WebDriverManager.firefoxdriver().setup();
+           // driver = new FirefoxDriver(options);
+            driver = new FirefoxDriver();
 
         } catch (Exception e) {
-            Application.error("Дравер не гайден", e);
+            Application.error("Дравер не найден", e);
         }
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
