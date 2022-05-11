@@ -15,11 +15,11 @@ public enum Browser {
 
     Browser() {
         try {
-            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-           // FirefoxOptions options = new FirefoxOptions();
-           // WebDriverManager.firefoxdriver().setup();
-           // driver = new FirefoxDriver(options);
-            driver = new FirefoxDriver();
+          //  System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+            FirefoxOptions options = new FirefoxOptions();
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver(options);
+          //  driver = new FirefoxDriver();
 
         } catch (Exception e) {
             Application.error("Дравер не найден", e);
