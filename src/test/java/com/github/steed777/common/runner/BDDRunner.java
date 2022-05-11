@@ -1,8 +1,11 @@
 package com.github.steed777.common.runner;
 
 
+import com.github.steed777.common.Application;
+import com.github.steed777.common.Browser;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.AfterClass;
 
 
 @CucumberOptions(
@@ -16,7 +19,7 @@ import io.cucumber.testng.CucumberOptions;
 public class BDDRunner extends AbstractTestNGCucumberTests {
 
 
-    /*@AfterClass
+    @AfterClass
     public void browserClose() {
 
         try {
@@ -25,5 +28,5 @@ public class BDDRunner extends AbstractTestNGCucumberTests {
         } catch (Exception ex) {
             Application.error("Что то пошло не так", ex);
         }
-    }*/
+    }
 }
