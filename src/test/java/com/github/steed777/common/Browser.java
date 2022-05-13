@@ -8,8 +8,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import java.util.concurrent.TimeUnit;
 
 public enum Browser {
-
-
     INSTANCE;
     private WebDriver driver;
     public final static int DEFAULT_TIMEOUT = 30;
