@@ -16,9 +16,9 @@ public enum Browser {
     Browser() {
         try {
           //  System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-            FirefoxOptions options = new FirefoxOptions();
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver(options);
+
+
+            driver = DriverFactory.getWebDriver();
           //  driver = new FirefoxDriver();
             /*System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
             FirefoxBinary firefoxBinary = new FirefoxBinary();
