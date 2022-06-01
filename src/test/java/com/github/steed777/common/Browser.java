@@ -41,4 +41,10 @@ public enum Browser {
     public static WebDriver getDriver() {
         return INSTANCE.driver;
     }
+    public static void setDriver(WebDriver driverNew) {
+        INSTANCE.driver = driverNew;
+        INSTANCE.driver.manage().window().maximize();
+        INSTANCE.driver.manage().timeouts().implicitlyWait(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
+        INSTANCE.driver.manage().deleteAllCookies();
+    }
 }
