@@ -19,14 +19,14 @@ import org.testng.annotations.AfterClass;
 public class BDDRunner extends AbstractTestNGCucumberTests {
 
 
-    /*@AfterClass
-    public void browserClose() {
+        @AfterClass(alwaysRun = true)
+        public void browserClose() {
 
-        try {
-            Thread.sleep(3000);
-            Browser.getDriver().quit();
-        } catch (Exception ex) {
-            Application.error("Что то пошло не так", ex);
+                try {
+                        Thread.sleep(1000);
+                        Browser.getDriver().quit();
+                } catch (Exception ex) {
+                        Application.error("Что то пошло не так", ex);
+                }
         }
-    }*/
 }

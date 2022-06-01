@@ -2,6 +2,7 @@ package com.github.steed777.common;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -19,6 +20,12 @@ public enum Browser {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver(options);
           //  driver = new FirefoxDriver();
+            /*System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+            FirefoxBinary firefoxBinary = new FirefoxBinary();
+            FirefoxOptions options = new FirefoxOptions();
+            options.setBinary(firefoxBinary);*/
+          //  options.setHeadless(true);  // <-- headless set here
+         //   driver = new FirefoxDriver(options);
 
         } catch (Exception e) {
             Application.error("Дравер не найден", e);
