@@ -11,32 +11,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.github.steed777.common.Application;
 import com.github.steed777.common.Browser;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
 public class MainPage {
+
     private static final int periodLoadWait = Integer.parseInt(Application.getProperty("periodElementWait"));
     private static final int periodElementWait = Integer.parseInt(Application.getProperty("periodElementWait"));
     private static final int periodInvisibleWait = Integer.parseInt(Application.getProperty("periodElementWait"));
 
-    @FindBy(xpath = "//input[contains(@placeholder, 'Логин')] or //input[contains(@placeholder, 'Пароль')]")
-    private static List<WebElement> loaderElements;
 
     public static void waitForLoad() {
-
-
-        new WebDriverWait(Browser.getDriver(), periodLoadWait).until(wd ->
+        new WebDriverWait(Browser.getDriver(), Duration.ofSeconds(periodLoadWait)).until(wd ->
                 ((JavascriptExecutor) Browser.getDriver()).executeScript("return document.readyState").equals("complete"));
-
     }
 
 
     public static void waitWhileElemIsVisible(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(Browser.getDriver(), periodElementWait);
-
-        wait.until(ExpectedConditions.visibilityOf(element));
-
+        WebDriverWait wait = new WebDriverWait(Browser.getDriver(), Duration.ofSeconds(periodElementWait));
+        try {
+            wait.until(ExpectedConditions.visibilityOf(element));
+        }catch (Exception e){
+            wait.until(ExpectedConditions.visibilityOf(element));
+        }
     }
 
     public static void waitSeconds(int sec) {
