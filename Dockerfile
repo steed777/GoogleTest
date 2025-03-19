@@ -30,7 +30,7 @@ RUN mvn dependency:go-offline
 # Или, если используете Gradle:
 # RUN gradle dependencies
 
-RUN chmod -R  +x drivers/geckodriver
+RUN chmod -R  +x drivers
 RUN chown -R root:root drivers/
 
 # Копируем исходный код проекта
