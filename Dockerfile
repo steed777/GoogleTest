@@ -34,7 +34,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 
 # Копируем скрипты, ресурсы и т.д.
-COPY resources/features ./resources/features
+#COPY resources/features ./resources/features
 # Или: COPY src/main/resources/features ./src/main/resources/features
 
 # Команда для запуска тестов Selenium
