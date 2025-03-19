@@ -8,7 +8,7 @@
 #RUN git clone https://github.com/steed777/GoogleTest.git /app
 
 # (Опционально) Переходим в директорию клонированного репозитория
-WORKDIR /app
+#WORKDIR /app
 
 # Используем базовый образ с Java (например, OpenJDK)
 FROM openjdk:17-jdk-slim
