@@ -31,7 +31,7 @@ RUN mvn dependency:go-offline
 # RUN gradle dependencies
 
 # Копируем исходный код проекта
-COPY src ./src
+COPY GoogleTest/src ./GoogleTest/src
 
 # Копируем скрипты, ресурсы и т.д.
 #COPY resources/features ./resources/features
