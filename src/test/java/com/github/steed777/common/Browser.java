@@ -18,11 +18,11 @@ public enum Browser {
 
     Browser() {
         try {
-            /*System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-            driver = new FirefoxDriver();*/
+            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+            driver = new FirefoxDriver();
 
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-            driver = new ChromeDriver();
+            /*System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+            driver = new ChromeDriver();*/
 //              System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 //             driver = new ThreadLocal<>(new FirefoxDriver());
 
