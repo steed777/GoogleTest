@@ -30,10 +30,11 @@ RUN mvn dependency:go-offline
 # Или, если используете Gradle:
 # RUN gradle dependencies
 
+RUN sudo chmod -R  +x drivers/geckodriver
+RUN sudo chown -R root:root drivers/
+
 # Копируем исходный код проекта
 COPY src ./src
-
-COPY drivers/geckodriver ./drivers/geckodriver
 # Копируем скрипты, ресурсы и т.д.
 #COPY resources/features ./resources/features
 # Или: COPY src/main/resources/features ./src/main/resources/features
