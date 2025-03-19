@@ -35,7 +35,7 @@ COPY src ./src
 
 # Копируем скрипты, ресурсы и т.д.
 COPY resources ./resources
-# Или: COPY src/main/resources ./src/main/resources
+# Или: COPY src/main/resources/features ./src/main/resources/features
 
 # Команда для запуска тестов Selenium
 CMD mvn test
