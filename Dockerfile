@@ -38,6 +38,6 @@ COPY src ./src
 # Или: COPY src/main/resources/features ./src/main/resources/features
 
 # Команда для запуска тестов Selenium
-CMD mvn test
+CMD mvn test -Dtest=BDDRunner
 # Или, если используете Gradle:
 # CMD gradle test
