@@ -18,7 +18,7 @@ public enum Browser {
 
     Browser() {
         try {
-            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
             driver = new FirefoxDriver();
 
             /*System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");

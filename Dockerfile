@@ -33,7 +33,7 @@ RUN mvn dependency:go-offline
 # Копируем исходный код проекта
 COPY src ./src
 
-COPY drivers/geckodriver.exe ./drivers/geckodriver.exe
+COPY drivers/geckodriver ./drivers/geckodriver
 # Копируем скрипты, ресурсы и т.д.
 #COPY resources/features ./resources/features
 # Или: COPY src/main/resources/features ./src/main/resources/features
