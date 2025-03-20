@@ -29,12 +29,12 @@ COPY pom.xml .
 RUN mvn dependency:go-offline
 # Или, если используете Gradle:
 # RUN gradle dependencies
+# Копируем исходный код проекта
+COPY src ./src
 
 RUN chmod -R  +x drivers
 RUN chown -R root:root drivers/
 
-# Копируем исходный код проекта
-COPY src ./src
 # Копируем скрипты, ресурсы и т.д.
 #COPY resources/features ./resources/features
 # Или: COPY src/main/resources/features ./src/main/resources/features
