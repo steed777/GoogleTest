@@ -30,7 +30,10 @@ RUN mvn dependency:go-offline
 # Или, если используете Gradle:
 # RUN gradle dependencies
 # Копируем исходный код проекта
-COPY src ./src
+
+# COPY src ./src
+
+COPY ./app
 
 RUN chmod -R  +x drivers
 RUN chown -R root:root drivers/
