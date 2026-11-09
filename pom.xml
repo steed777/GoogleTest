@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.steed777</groupId>
-    <artifactId>GoogleTest</artifactId>
+    <groupId>org.example</groupId>
+    <artifactId>autotest_storage</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -17,6 +17,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>sibintek-repo</id>
+            <name>Sibintek Repository</name>
+            <url>https://vme-git.sibintek.ru/nexus/repository/maven-public</url>
+        </repository>
+    </repositories>
+  
+   <pluginRepositories>
+        <pluginRepository>
+        <id>sibintek-repo</id>
+        <name>Sibintek Plugin Repository</name>
+        <url>https://vme-git.sibintek.ru/nexus/repository/maven-public</url>
+        </pluginRepository>
+    </pluginRepositories>
+    
     <dependencies>
         <dependency>
             <groupId>ch.qos.reload4j</groupId>
@@ -35,7 +51,8 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.6.0</version>
+            <version>4.11.0</version>
+            <!--<version>3.141.59</version>-->
         </dependency>
 
         <dependency>
@@ -50,12 +67,12 @@
             <artifactId>webdrivermanager</artifactId>
             <version>4.4.1</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>ch.qos.reload4j</groupId>
             <artifactId>reload4j</artifactId>
             <version>1.2.19</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.testng</groupId>
@@ -63,14 +80,6 @@
             <version>7.3.0</version>
         </dependency>
 
-
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -78,18 +87,6 @@
             <version>${cucumber.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>${cucumber.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.twilio.sdk</groupId>
-            <artifactId>twilio</artifactId>
-            <version>9.0.1</version>
-        </dependency>
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -105,21 +102,73 @@
             <version>${allure.version}</version>
             <type>pom</type>
         </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng -->
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-testng</artifactId>
+            <version>2.22.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <!--<dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.3.0</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <!--<dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+        <!--<dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.3.0</version>
+        </dependency>-->
+
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <!--<testFailureIgnore>false</testFailureIgnore>-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <disableXmlReport>true</disableXmlReport>
+                    <!--<testFailureIgnore>true</testFailureIgnore>-->
+                    <!--<useSystemClassLoader>false</useSystemClassLoader>-->
+                    <!--<argLine>- Xmx1024m -XX:MaxPermSize=256m</argLine>-->
+                    <!--<parallel>methods</parallel>
+                      <useUnlimitedThreads>true</useUnlimitedThreads>-->
+                     <!--<testFailureIgnore>false</testFailureIgnore>-->
                     <!--<argLine>
-                        -Dfile.encoding=UTF-8
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        -&lt;!&ndash;Dfile.encoding=UTF-8
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"&ndash;&gt;
+                        - Xmx1024m -XX:MaxPermSize=256m
                     </argLine>-->
+                    <!--<suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>-->
+                    <!--<skipTests>true</skipTests>-->
+
                 </configuration>
                 <dependencies>
                     <dependency>

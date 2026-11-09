@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="7397" started-at="2026-10-29T22:13:25 MSK" finished-at="2026-10-29T22:13:32 MSK">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.github.steed777.common.runner.BDDRunner@1c17b83]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Surefire test" duration-ms="7397" started-at="2026-10-29T22:13:25 MSK" finished-at="2026-10-29T22:13:32 MSK">
+      <class name="com.github.steed777.common.runner.BDDRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.github.steed777.common.runner.BDDRunner@1c17b83]" name="setUpClass" is-config="true" duration-ms="256" started-at="2026-10-29T22:13:25 MSK" finished-at="2026-10-29T22:13:25 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.github.steed777.common.runner.BDDRunner@1c17b83]" name="runScenario" duration-ms="6822" started-at="2026-10-29T22:13:25 MSK" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-10-29T22:13:32 MSK">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking google search"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Application framework]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.github.steed777.pages.googlePage.GooglePage.openLoginPage(GooglePage.java:34)
+at com.github.steed777.flow.GoogleFlow.goGooglePage(GoogleFlow.java:21)
+at com.github.steed777.steps.GoogleStep.pageAuthorization(GoogleStep.java:17)
+at ✽.Go to the testing page(file:///C:/Users/Konstantin/IdeaProjects/GoogleTest/src/test/resources/features/applicationFramework.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.github.steed777.common.runner.BDDRunner@1c17b83]" name="runScenario" duration-ms="6824" started-at="2026-10-29T22:13:25 MSK" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-10-29T22:13:32 MSK">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking google search other"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Application framework other]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.github.steed777.pages.googlePage.GooglePage.openLoginPage(GooglePage.java:34)
+at com.github.steed777.flow.GoogleFlow.goGooglePage(GoogleFlow.java:21)
+at com.github.steed777.steps.GoogleStep.pageAuthorization(GoogleStep.java:17)
+at ✽.Go to the testing page(file:///C:/Users/Konstantin/IdeaProjects/GoogleTest/src/test/resources/features/parallelOther.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.github.steed777.common.runner.BDDRunner@1c17b83]" name="tearDownClass" is-config="true" duration-ms="30" started-at="2026-10-29T22:13:32 MSK" finished-at="2026-10-29T22:13:32 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.github.steed777.common.runner.BDDRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

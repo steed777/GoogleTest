@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class ScreenShot {
 
+
     public static void makeScreenShot(String title) {
         try {
             Allure.addAttachment(title,

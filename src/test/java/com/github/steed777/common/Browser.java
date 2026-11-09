@@ -2,7 +2,10 @@ package com.github.steed777.common;
 
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,12 +14,28 @@ public enum Browser {
     INSTANCE;
     private WebDriver driver;
     public final static int DEFAULT_TIMEOUT = 30;
+    /*private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    public final static int DEFAULT_TIMEOUT = 30;*/
 
     Browser() {
         try {
-              System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-             driver = new FirefoxDriver();
+            //   System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+            //  driver = new FirefoxDriver();
+//              System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+//             driver = new ThreadLocal<>(new FirefoxDriver());
 
+            /*System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+            FirefoxBinary firefoxBinary = new FirefoxBinary();
+            FirefoxOptions options = new FirefoxOptions();
+            options.setBinary(firefoxBinary);
+            options.setHeadless(true);
+            driver = new FirefoxDriver(options);*/
+
+            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+            driver = new ChromeDriver();
+            System.out.println("**************************************");
+            System.out.println("был выбран для запуска браузер Chrome");
+            System.out.println("**************************************");
             /*FirefoxOptions options = new FirefoxOptions();
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver(options);*/
@@ -30,6 +49,15 @@ public enum Browser {
         driver.manage().timeouts().setScriptTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
         //   driver.manage().deleteAllCookies();
     }
+
+    /*public static WebDriver getFirstDriver() {
+        WebDriverManager.firefoxdriver().setup();
+        return new FirefoxDriver();
+    }
+
+    public void setDriver() {
+        driver.set(getFirstDriver());
+    }*/
 
     public static WebDriver getDriver() {
         return INSTANCE.driver;

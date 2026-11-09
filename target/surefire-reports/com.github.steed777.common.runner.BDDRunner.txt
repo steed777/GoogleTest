@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.github.steed777.common.runner.BDDRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.744 s <<< FAILURE! - in com.github.steed777.common.runner.BDDRunner
+runScenario(com.github.steed777.common.runner.BDDRunner)  Time elapsed: 7.28 s  <<< FAILURE!
+java.lang.NullPointerException
+
+runScenario(com.github.steed777.common.runner.BDDRunner)  Time elapsed: 7.281 s  <<< FAILURE!
+java.lang.NullPointerException
+

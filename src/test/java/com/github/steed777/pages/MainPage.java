@@ -88,7 +88,7 @@ public class MainPage {
     }
 
     public static void typeSubmit(WebElement element, String value) {
-        element.sendKeys(value + Keys.TAB);
+        element.sendKeys(value + Keys.ENTER);
        // waitWhileElemIsNotPresent(loaderElements);
     }
 
